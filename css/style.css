@@ -1,0 +1,92 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  background-color: var(--dark-blue);
+  font-family: 'Manrope';
+  font-weight: 800;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--dark-grayish-blue);
+  max-width: min-content;
+  padding: 2rem;
+}
+
+.card__advice-id {
+  font-size: 0.75rem;
+  color: var(--neon-green);
+  letter-spacing: 2px;
+}
+
+.card__content {
+  font-size: 1.75rem;
+  color: var(--light-cyan);
+}
+
+.card__pattern-divider {
+  margin: 1rem 0;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: -3.5rem;
+
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.3s;
+}
+
+.card__btn:hover {
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+.card__dice {
+  width: 1.25rem;
+}
+
+@keyframes dice {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    transform: scale(0.85);
+  }
+}
